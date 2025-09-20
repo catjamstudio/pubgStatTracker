@@ -77,3 +77,4 @@
 //
 // NOTE: Variables are available as both global vars (%varName%) and action args.
 // In chat/overlays use %varName%, in C# you can access via CPH.GetGlobalVar<T>().
+`

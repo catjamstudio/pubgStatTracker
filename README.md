@@ -1,4 +1,4 @@
-`// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
+// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
 // By PlayUltraWide
 //
 // ── Requirements ──
@@ -77,4 +77,4 @@
 //
 // NOTE: Variables are available as both global vars (%varName%) and action args.
 // In chat/overlays use %varName%, in C# you can access via CPH.GetGlobalVar<T>().
-`
+

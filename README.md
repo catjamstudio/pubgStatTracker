@@ -1,4 +1,4 @@
-// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
+`// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
 // By PlayUltraWide
 //
 // ── Requirements ──

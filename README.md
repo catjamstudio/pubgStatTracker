@@ -1,1 +1,84 @@
+# PUBG Streamer Stat Tracker v0.8.1
 
+For PUBG streamers that use Streamer.Bot app to track their stats via PUBG dev api
+
+PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
+By PlayUltraWide
+
+── Requirements ──
+This script requires your own PUBG Dev API Key.
+Apply here (instant access): https:developer.pubg.com/
+
+── How to Setup ──
+1. Import "PUBG Streamer Stat Tracker 0.8.1 Export_publicBeta.sb" into StreamerBot.
+2. Enable the preloaded commands/timed actions (disabled by default during import).
+3. Open the action "PUBG Streamer Stat Tracker API Request Master".
+   - Enter your PUBG Dev API Key (%pubgApiKey%).
+   - Enter your PUBG in-game player name (%pubgPlayerName%).
+   - Optional: Adjust %sessionWindow%, %ignoreThreshold%, and %pubgWinSearchLimit%.
+     (Defaults are optimized to reduce API usage and fit the free tier limits).
+
+── Default StreamerBot Commands ──
+!pubgStats      → Show totals (kills, damage, wins, etc.)
+!recentMatch    → Show most recent match team summary
+!mapResults     → Show map rotation results
+!resetStats     → Clear cache and reset session totals
+!wins           → Show overall win totals
+!lastWin        → Show team roster summary from the most recent win
+
+To create new chat/overlay outputs: duplicate any of the stat tracker message actions
+example "PUBG Streamer Stat Tracker Msg 3. WWCD Summary"
+and replace variables in the Twitch message sub-action.
+
+=== PUBG StreamerBot Variables Reference (v0.8.1) ===
+
+── Player & API ──
+%pubgApiKey%                   → Your developer API key
+%pubgPlayerName%                → The tracked player name
+
+── Internal Settings / Controls ──
+%sessionWindow%                 → Hours of match history to include in totals
+%ignoreThreshold%               → Hours since last played before wiping totals
+%pubgWinSearchLimit%            → Matches searched back for last win (default = 10)
+
+── Totals (Session Window) ──
+%pubgTotalDamage%               → Total damage dealt
+%pubgTotalKills%                → Total kills
+%pubgTotalAssists%              → Total assists
+%pubgTotalKnocks%               → Total DBNOs (knocks)
+%pubgTotalWWCD%                 → Total wins ("chicken dinners")
+%pubgTotalKD%                   → Kill/Death ratio
+%pubgTotalMatchCount%           → Matches played
+%pubgTotalLongestKill%          → Longest kill distance (e.g., "287.3m")
+%pubgTotalAvgPlacement%         → Average placement across matches
+%pubgTotalTop10Rate%            → % of matches finished in top 10
+
+── Mode Summaries ──
+%pubgGameModePlayed%            → Matches played per mode (TPP/FPP Solo/Duo/Squad)
+%pubgGameModeWins%              → Wins per mode
+%pubgGameModeSummaryAndWins%    → Detailed per-mode stats (kills, assists, dmg, wins, KD, longest kill)
+
+── Map Summary ──
+%pubgMapSummary%                → Matches per map, with counts & percentages
+
+── Recent Match Data ──
+%pubgRecentMatchSummary%        → Team roster summary from the most recent match
+%pubgRecentMatchPlacement%      → Placement in the most recent match
+%pubgPlayer1%                   → First teammate line (always the tracked player)
+%pubgPlayer2%                   → Second teammate line (if available)
+%pubgPlayer3%                   → Third teammate line (if available)
+%pubgPlayer4%                   → Fourth teammate line (if available)
+
+── Recent Win Data ──
+%pubgRecentWinSummary%          → Team roster summary from the most recent *win*
+                                   (within last %pubgWinSearchLimit% matches)
+
+── Misc ──
+%pubgPlayerStatsLastPlayedAt%   → Timestamp (UTC) of last recorded match
+
+── Custom Automatic Triggers ──
+"pubg_new_totals"               → Fired when new matches are processed and totals update
+"pubg_chicken_dinner"           → Fired when a new win is detected
+
+NOTE: Variables are available as both global vars (%varName%) and action args.
+In chat/overlays use %varName%, in C# you can access via CPH.GetGlobalVar<T>().

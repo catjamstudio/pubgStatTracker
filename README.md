@@ -3,7 +3,7 @@
 For PUBG streamers that use Streamer.Bot app to track their stats via PUBG dev api
 
 PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
-By PlayUltraWide
+By PlayUltrawide
 
 ── IMPORTANT NOTES ──
 PUBG API waits until the entire match is finished before delivering both match summaries and telemetry.

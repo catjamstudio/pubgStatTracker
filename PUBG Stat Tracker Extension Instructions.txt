@@ -1,5 +1,10 @@
-`// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
+// PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
 // By PlayUltraWide
+//
+// IMPORTANT NOTES:
+// PUBG API waits until the entire match is finished before delivering both match summaries and telemetry.
+// Typically wait time is 60-90 seconds based on PUBG server load.
+// Leaving early doesn’t trigger an early publish.
 //
 // ── Requirements ──
 // This script requires your own PUBG Dev API Key.
@@ -77,4 +82,3 @@
 //
 // NOTE: Variables are available as both global vars (%varName%) and action args.
 // In chat/overlays use %varName%, in C# you can access via CPH.GetGlobalVar<T>().
-`

@@ -5,6 +5,11 @@ For PUBG streamers that use Streamer.Bot app to track their stats via PUBG dev a
 PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
 By PlayUltraWide
 
+── IMPORTANT NOTES ──
+PUBG API waits until the entire match is finished before delivering both match summaries and telemetry.
+Typically wait time is 60-90 seconds based on PUBG server load.
+Leaving early doesn’t trigger an early publish.
+
 ── Requirements ──
 This script requires your own PUBG Dev API Key.
 Apply here (instant access): https:developer.pubg.com/

@@ -1,8 +1,8 @@
-# PUBG Streamer Stat Tracker v0.8.1
+# PUBG Streamer Stat Tracker v0.8.2
 
 For PUBG streamers that use Streamer.Bot app to track their stats via PUBG dev api
 
-PUBG Streamer Stat Tracker v0.8.1 Stable (RecentWinSummary Tweaks)
+PUBG Streamer Stat Tracker v0.8.2 Stable (FullTDMExclusion)
 By PlayUltrawide
 
 ── IMPORTANT NOTES ──
